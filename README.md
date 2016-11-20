@@ -1,3 +1,3 @@
 # My-Idol-Social-Media
 
-Change content  auth.php first with your token
+Change token in assets/auth.php first with your token
