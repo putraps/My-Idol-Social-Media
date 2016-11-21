@@ -1,7 +1,4 @@
 # My-Idol-Social-Media
 
-<<<<<<< HEAD
-Change content  assets/auth.php first with your token
-=======
-Change token in assets/auth.php first with your token
->>>>>>> origin/master
+1. Change Token in  assets/config/auth.php first with your token
+2. Change PAGE ID and USERNAME with your idol
