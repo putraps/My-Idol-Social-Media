@@ -1,0 +1,7 @@
+<?php
+	//USERNAME TWITTER IDOL
+	$myIdolUsername = 'USERNAME YOUR IDOL';
+
+	//FACEBOOK PAGE IDOL ID 
+	$idolID = 'PAGE ID YOUR IDOL';
+?>
