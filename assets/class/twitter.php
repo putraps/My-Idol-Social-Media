@@ -50,8 +50,7 @@ class MyTwitterIdol{
 	}
 } 
  
-/*echo '<a class="twitter-timeline" href="https://twitter.com/taylorswift13"  data-width="500" data-chrome="nofooter noborders noheader noscrollbar">
-		Tweets by taylorswift13</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>';*/
+/**/
 		
 ?>
 

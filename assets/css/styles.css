@@ -1,0 +1,52 @@
+
+body {
+  background: #F1F3FA;
+}
+
+.canvas1 {
+	background-color:white;
+	margin: 20px;
+	height: 700px;
+	width: 340px;
+	float: left;
+}
+
+.canvas1 img{
+  padding: 20px;
+  float: right;
+}
+
+
+.canvas1 h3{
+  padding: 20px;
+  float: left;
+}
+.canvas1 h1{
+  padding: 20px;
+}
+
+.canvas1 p{
+  padding: 24px;
+  float: right;
+}
+
+.canvas2 {
+	background-color:white;
+	margin: 20px;
+	height: 700px;
+	width: 20%;
+	float: left;
+}
+
+.canvas3 {
+	background-color:white;
+	margin: 20px;
+	height: 700px;
+	width: 40%;
+	float: left;
+}
+
+.canvas3 #pg{
+	padding:5%;
+}
+

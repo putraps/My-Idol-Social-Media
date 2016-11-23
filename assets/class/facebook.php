@@ -64,7 +64,7 @@ class MyFacebookIdol{
         $arrayOfAlbum = json_decode($response);
 		
 		foreach($arrayOfAlbum->data as $album){
-			if($album->{'name'} == 'Profile Pictures'){
+			if($album->{'name'} == 'Mobile Uploads'){
 				$albumID = $album->{'id'};
 				break;
 			}
@@ -78,15 +78,16 @@ class MyFacebookIdol{
 		
 		$this->curl = curl_init();
 		$albumID = $this->getAlbumProfilePictureMyIdol();
-		$url = 'https://graph.facebook.com/v2.8/442764410368/photos/?fields=source&access_token=429342287190108|WKLwyU6tTch7X6BR7wrDMoROIvE';
-		echo $url;
+		$url = $this->hostname.$this->ver.$albumID.'/photos/?fields=source&'.$this->access_token;
+		$this->curl = curl_init();
 		curl_setopt($this->curl, CURLOPT_URL, $url);
-        curl_setopt($this->curl, CURLOPT_SSL_VERIFYPEER, false);
-        curl_setopt($this->curl, CURLOPT_RETURNTRANSFER, true);
-        $response = curl_exec($this->curl);
-        curl_close($this->curl);
+		curl_setopt($this->curl, CURLOPT_RETURNTRANSFER, true);
+		curl_setopt($this->curl, CURLOPT_TIMEOUT, 20);
+		curl_setopt($this->curl, CURLOPT_SSL_VERIFYPEER, false);
+		curl_setopt($this->curl, CURLOPT_FOLLOWLOCATION, false);
+		$response = curl_exec($this->curl);
+		curl_close($this->curl);
         $arrayOfPhoto = json_decode($response);
-		echo sizeof($arrayOfPhoto);
 		$photos;
 		$count=0;
 		
