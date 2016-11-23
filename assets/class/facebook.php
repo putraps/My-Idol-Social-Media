@@ -55,7 +55,7 @@ class MyFacebookIdol{
 		
 		$albumID;
 		$this->curl = curl_init();
-		$url = $hostname.$ver.$idolID.'/albums/?'.$access_token;
+		$url = $this->hostname.$this->ver.$idolID.'/albums/?'.$this->access_token;
 		curl_setopt($this->curl, CURLOPT_URL, $url);
         curl_setopt($this->curl, CURLOPT_SSL_VERIFYPEER, false);
         curl_setopt($this->curl, CURLOPT_RETURNTRANSFER, true);
@@ -64,8 +64,8 @@ class MyFacebookIdol{
         $arrayOfAlbum = json_decode($response);
 		
 		foreach($arrayOfAlbum->data as $album){
-			if($album->name == 'Profile Picture'){
-				$albumID = $album->id;
+			if($album->{'name'} == 'Profile Pictures'){
+				$albumID = $album->{'id'};
 				break;
 			}
 		}
@@ -77,13 +77,16 @@ class MyFacebookIdol{
 		include "/../config/idol.php";
 		
 		$this->curl = curl_init();
-		$url = $hostname.$ver.$idolID.'/'.getAlbumProfilePictureMyIdol().'/photos/?fields=source&'.$access_token;
+		$albumID = $this->getAlbumProfilePictureMyIdol();
+		$url = 'https://graph.facebook.com/v2.8/442764410368/photos/?fields=source&access_token=429342287190108|WKLwyU6tTch7X6BR7wrDMoROIvE';
+		echo $url;
 		curl_setopt($this->curl, CURLOPT_URL, $url);
         curl_setopt($this->curl, CURLOPT_SSL_VERIFYPEER, false);
         curl_setopt($this->curl, CURLOPT_RETURNTRANSFER, true);
         $response = curl_exec($this->curl);
         curl_close($this->curl);
         $arrayOfPhoto = json_decode($response);
+		echo sizeof($arrayOfPhoto);
 		$photos;
 		$count=0;
 		
