@@ -1,7 +1,7 @@
 <?php
 	//USERNAME TWITTER IDOL
-	$myIdolUsername = 'taylorswift13';
+	$myIdolUsername = 'USERNAME YOUR IDOL';
 
-	//FACEBOOK PAGE IDOL ID 
-	$idolID = '19614945368';
+	//FACEBOOK PAGE ID IDOL  
+	$idolID = 'PAGE ID YOUR IDOL';
 ?>
